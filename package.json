@@ -79,7 +79,7 @@
   "files": [
     "out/*.css",
     "LICENSE.md",
-    "dist/**/*"
+    "dist/*"
   ],
   "config": {
     "commitizen": {
