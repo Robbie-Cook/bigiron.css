@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
-    "dev": "gulp watch",
+    "start": "gulp watch",
     "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
     "lint:css": "stylelint src/**/*.css docs/style.css",
     "lint": "npm lint:js --fix && npm lint:css --fix",
