@@ -80,6 +80,6 @@
     "LICENSE.md"
   ],
   "dependencies": {
-    "semantic-release": "^17.3.0"
+    "semantic-release": "^16.0.4"
   }
 }
