@@ -4,7 +4,14 @@
   "description": "A drop-in collection of CSS styles to make simple websites just a little nicer",
   "main": "index.js",
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "build": "gulp build",
+    "start": "gulp watch",
+    "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
+    "lint:css": "stylelint src/**/*.css docs/style.css",
+    "lint": "npm lint:js --fix && npm lint:css --fix",
+    "accessibility": "npm build && node accessibility.js",
+    "validate": "npm lint:js && npm lint:css && npm accessibility"
   },
   "repository": {
     "type": "git",
