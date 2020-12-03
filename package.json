@@ -27,7 +27,12 @@
   ],
   "author": "Robbie Cook",
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
+  },
+  "scripts": {
+    "commit": "cz"
   },
   "license": "MIT",
   "bugs": {
@@ -83,5 +88,7 @@
     "out/*.css",
     "LICENSE.md"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "commitizen": "^4.2.2"
+  }
 }
