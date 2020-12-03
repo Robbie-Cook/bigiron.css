@@ -22,9 +22,12 @@ const postcssColorModFunction = require('postcss-color-mod-function').bind(null,
   stringifier: (color) => color.toRGBLegacy()
 })
 
+const sass = require('gulp-sass')
+sass.compiler = require('node-sass')
+
 const paths = {
   docs: { src: 'docs/**', dest: 'out/docs' },
-  styles: { src: 'src/builds/*.css', dest: 'out', watch: 'src/**/*.css' }
+  styles: { src: 'src/builds/*.scss', dest: 'out', watch: ['src/**/*.css', 'src/**/*.css'] }
 }
 
 // https://stackoverflow.com/a/20732091
@@ -59,6 +62,7 @@ const style = () => {
     gulp
       .src(paths.styles.src)
       .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
       .pipe(postcss([postcssImport(), postcssColorModFunction(), postcssInlineSvg()]))
 
       .pipe(startDiff())
@@ -84,7 +88,7 @@ const style = () => {
 
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(paths.styles.dest))
-      .pipe(gulp.dest(paths.docs.dest + '/water.css'))
+      .pipe(gulp.dest(paths.docs.dest + '/bigiron.css'))
 
       .pipe(filter('**/*.css')) // Remove sourcemaps from the pipeline
       .pipe(sizereport({ gzip: true, total: false, title: 'SIZE REPORT' }))

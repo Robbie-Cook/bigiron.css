@@ -3,8 +3,7 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Water.css</title>
-    <link rel="canonical" href="https://watercss.kognise.dev/" />
+    <title>BigIron.css</title>
     <meta
       name="description"
       content="A drop-in collection of CSS styles to make simple websites like this just a little bit nicer."
@@ -16,18 +15,18 @@
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5" />
     <link rel="shortcut icon" id="icon-ico" href="./icons/favicon.ico" />
-    <meta name="apple-mobile-web-app-title" content="Water.css" />
-    <meta name="application-name" content="Water.css" />
+    <meta name="apple-mobile-web-app-title" content="Bigiron.css" />
+    <meta name="application-name" content="Bigiron.css" />
     <meta name="msapplication-TileColor" content="#00aba9" />
     <meta name="msapplication-config" content="./icons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Startup styles of water.css, so styles don't have to wait until JS is loaded -->
-    <link rel="preload" as="style" href="./water.css/dark.min.css" />
-    <link rel="preload" as="style" href="./water.css/light.min.css" />
-    <link rel="stylesheet" id="js-startup-stylesheet" href="./water.css/water.min.css" />
+    <!-- Startup styles of bigiron.css, so styles don't have to wait until JS is loaded -->
+    <link rel="preload" as="style" href="../out/dark.min.css" />
+    <link rel="preload" as="style" href="../out/light.min.css" />
+    <link rel="stylesheet" id="js-startup-stylesheet" href="../out/bigiron.min.css" />
 
-    <!-- Dynamic version of water.css, overwrites startup styles. JavaScript sets & updates href -->
+    <!-- Dynamic version of bigiron.css, overwrites startup styles. JavaScript sets & updates href -->
     <link rel="stylesheet" id="js-stylesheet" />
 
     <!-- Custom styles for the documentation / version picker -->
@@ -35,15 +34,14 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://watercss.kognise.dev/" />
-    <meta property="og:title" content="Water.css" />
+    <meta property="og:title" content="Bigiron.css" />
     <meta
       property="og:description"
       content="A drop-in collection of CSS styles to make simple websites like this just a little bit nicer."
     />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/kognise/water.css/master/assets/logo.png"
+      content="https://raw.githubusercontent.com/kognise/bigiron.css/master/assets/logo.png"
     />
     <meta property="og:image:width" content="1154" />
     <meta property="og:image:height" content="444" />
@@ -51,9 +49,8 @@
       {
         "@context": "http://www.schema.org",
         "@type": "WebSite",
-        "name": "Water.css",
-        "alternateName": "Water.css",
-        "url": "https://watercss.kognise.dev/"
+        "name": "Bigiron.css",
+        "alternateName": "Bigiron.css",
       }
     </script>
 
@@ -74,14 +71,14 @@
   </head>
 
   <body>
-    <h1>Water.css</h1>
+    <h1>Bigiron.css</h1>
 
     <p>
-      Water.css is a drop-in collection of CSS styles to make simple websites like this just a
+      Bigiron.css is a drop-in collection of CSS styles to make simple websites like this just a
       little bit nicer.
     </p>
     <p>
-      Now you can write your simple static site with nice semantic html, and Water.css will manage
+      Now you can write your simple static site with nice semantic html, and Bigiron.css will manage
       the styling for you.
     </p>
 
@@ -89,23 +86,10 @@
       <div>
         <a href="#installation"><b>Get it already!</b></a>
         <br />
-        <a href="https://github.com/kognise/water.css"><b>GitHub</b></a>
+        <a href="https://github.com/Robbie-Cook/bigiron.css"><b>GitHub</b></a>
       </div>
 
-      <a
-        href="https://www.producthunt.com/posts/water-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-water-css"
-        target="_blank"
-        rel="noopener"
-      >
-        <img
-          id="product-hunt"
-          src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=150490&theme=dark&period=daily"
-          alt="Water.css - Make your tiny website just a little nicer | Product Hunt Embed"
-          style="width: 250px; height: 54px;"
-          width="250px"
-          height="54px"
-        />
-      </a>
+
     </div>
 
     <h2>Installation</h2>
@@ -119,12 +103,6 @@
           Copy to clipboard
         </button>
       </header>
-
-      <div id="link-snippet-container">
-        <pre id="link-snippet-auto"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"></code></pre>
-        <pre hidden id="link-snippet-dark"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"></code></pre>
-        <pre hidden id="link-snippet-light"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"></code></pre>
-      </div>
 
       <h3>Options</h3>
       <form id="theme-form">
@@ -186,11 +164,11 @@
       A bookmarklet is a snippet of JavaScript that sits in your bookmarks bar.
     </p>
     <p>
-      The Waterize bookmarklet can be used to make ugly websites more readable by replacing the styles with Water.css. Just drag this link to your bookmarks bar:
+      The Bigironize bookmarklet can be used to make ugly websites more readable by replacing the styles with Bigiron.css. Just drag this link to your bookmarks bar:
     </p>
     <strong>
-      <a href="javascript:void%20function(){const%20a=a=%3Edocument.querySelectorAll(a),b=(a,b)=%3EObject.assign(document.createElement(a),b);a(%22link[rel=\%22stylesheet\%22],style%22).forEach(a=%3Ea.remove()),a(%22*%22).forEach(a=%3Ea.style=%22%22),document.head.append(b(%22link%22,{rel:%22stylesheet%22,href:%22//cdn.jsdelivr.net/npm/water.css%402/out/water.css%22}),!a(%22meta[name=\%22viewport\%22]%22).length%26%26b(%22meta%22,{name:%22viewport%22,content:%22width=device-width,initial-scale=1.0%22}))}();">
-        Waterize
+      <a href="javascript:void%20function(){const%20a=a=%3Edocument.querySelectorAll(a),b=(a,b)=%3EObject.assign(document.createElement(a),b);a(%22link[rel=\%22stylesheet\%22],style%22).forEach(a=%3Ea.remove()),a(%22*%22).forEach(a=%3Ea.style=%22%22),document.head.append(b(%22link%22,{rel:%22stylesheet%22,href:%22//cdn.jsdelivr.net/npm/bigiron.css%402/out/bigiron.css%22}),!a(%22meta[name=\%22viewport\%22]%22).length%26%26b(%22meta%22,{name:%22viewport%22,content:%22width=device-width,initial-scale=1.0%22}))}();">
+        Bigironize
       </a>
     </strong>
 

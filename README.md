@@ -7,10 +7,10 @@
 
 <br>
 
-<h1 align="center">Water.css</h1>
+<h1 align="center">bigiron.css</h1>
+<h3 align="center">Forked from water.css</h3>
 <p align="center">🌊 A drop-in collection of CSS styles to make simple websites just a little nicer</p>
 
-[![Water.css](assets/logo.svg)](https://watercss.kognise.dev/)
 
 <br>
 
@@ -23,19 +23,7 @@
 - Beautiful
 - No classes
 
-## Why?
-
-I commonly make quick demo pages or websites with simple content. For these, I don't want to spend time styling them but don't like the ugliness of the default styles.
-
-Water.css is a CSS framework that doesn't require any classes. You just include it in your `<head>` and forget about it, while it silently makes everything nicer.
-
-## Who?
-
-You might want to use Water.css if you're making a simple static page or demo website that you don't want to spend time styling.
-
-Although it originally wasn't built for more complex websites, many developers have used Water.css as a base stylesheet and creatively applied custom styles to build out an entire app. Nothing is stopping you from doing the same!
-
-## How?
+##
 
 Just stick this in your `<head>`:
 
@@ -54,23 +42,6 @@ Just stick this in your `<head>`:
 <br>
 
 A **preview** of the different themes is available [on the **demo page**](https://watercss.kognise.dev/#installation)! ⚡
-
-#### How the "Automatic Theme" works
-
-The main `water.css` file automatically switches between light and dark mode depending on the system preferences of a user's device. This detection is made possible through a CSS media query called [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). In browsers where the preference can't be detected, `water.css` will stick to the light theme.
-
-If you want to avoid this behavior, use either `dark.css` or `light.css`.
-
-#### Supporting Internet Explorer
-
-All three distributions of Water.css support Internet Explorer 11, but the main `water.css` file **doesn't respect the user's color scheme** and will be locked to light mode due to lack of `prefers-color-scheme` support.
-
-Be aware that IE also doesn't support [runtime theming](#theming), and fixed fallback values will be used. If you want to override the Water.css theme in a way that's compatible with IE, we recommend that you [compile your own theme](#compiling-your-own-theme).
-
-#### Unminified builds
-
-All versions are also available as unminified stylesheets, which can be handy during development.  
-Simply remove the `.min` from the file name.
 
 ## Theming
 
@@ -139,7 +110,7 @@ If you are targeting browsers without support for CSS Custom Properties such as 
 - Clone the repository to your machine
 - Run `yarn` to install dependencies
 - Make the theming changes you want in `src/variables-*.css`
-- Run `yarn build` to compile the CSS files
+- Run `npm build` to compile the CSS files
 - Use the compiled files in the `out/` directory on your site
 
 You also might want to check out the [Contributing Guide](https://github.com/kognise/water.css/tree/master/.github/CONTRIBUTING.md) as it contains further information about the build setup.

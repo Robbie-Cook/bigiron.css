@@ -19,10 +19,10 @@ Please take a moment to read through the following guidelines:
 <br>
 
 > **Quickstart**:
-> 1. `yarn install` – install dependencies
-> 2. `yarn dev` – start the dev server, make your changes
-> 3. `yarn validate` – make sure your changes pass all tests
-> 4. `yarn changeset` – describe your changes for the changelog
+> 1. `npm install` – install dependencies
+> 2. `npm dev` – start the dev server, make your changes
+> 3. `npm validate` – make sure your changes pass all tests
+> 4. `npm changeset` – describe your changes for the changelog
 
 <br>
 
@@ -30,21 +30,21 @@ Please take a moment to read through the following guidelines:
 
 1. Get a copy of the repository. It is recommended to [fork](https://github.com/kognise/water.css/fork) it first and clone to your machine using `git`.
 
-2. Make sure that you have [yarn installed](https://classic.yarnpkg.com/en/docs/install/), then install dependencies by running:
+2. Make sure that you have [npm installed](https://classic.yarnpkg.com/en/docs/install/), then install dependencies by running:
 
     ```
-    yarn install
+    npm install
     ```
 
 3. Start the development server with live reload:
 
     ```
-    yarn dev
+    npm dev
     ```
 
 4. Now you can visit [localhost:3000](http://localhost:3000) and start playing around with the framework – when you make changes to Water.css, the site will reload automatically so you can see what changed.
 
-*Note:* A script that builds distribution ready files is also available but it is not the part of development workflow. It is designed to be triggered automatically while publishing a new version of Water.css, but if you want to inspect the minified assets meant for production, you can run it manually: `yarn build`
+*Note:* A script that builds distribution ready files is also available but it is not the part of development workflow. It is designed to be triggered automatically while publishing a new version of Water.css, but if you want to inspect the minified assets meant for production, you can run it manually: `npm build`
 
 > Alternatively, you can develop in Repl.it, a supercool in-browser IDE! Just click this button: [![Run on Repl.it](https://repl.it/badge/github/kognise/water.css)](https://repl.it/github/kognise/water.css)
 
@@ -95,13 +95,13 @@ If the code you introduced has errors or some of the colors aren't accessible, y
 You can check whether your changes pass all tests before committing them by running:
 
 ```
-yarn validate
+npm validate
 ```
 
 If there are errors, you can try to fix them automatically by running:
 
 ```
-yarn lint
+npm lint
 ```
 
 <details>
@@ -123,7 +123,7 @@ We use a tool called [Changesets](https://github.com/atlassian/changesets) to ke
 Just run this command for each change you made, and then answer a few questions:
 
 ```
-yarn changeset
+npm changeset
 ```
 
 If you're not sure what kind of change you're making, pick "patch".

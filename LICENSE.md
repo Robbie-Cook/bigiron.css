@@ -1,3 +1,5 @@
+Third-party water.css license
+
 # The MIT License (MIT)
 
 Copyright © 2019 Kognise
