@@ -76,11 +76,6 @@
   "browserslist": [
     "defaults"
   ],
-  "files": [
-    "out/*.css",
-    "LICENSE.md",
-    "dist/*"
-  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
