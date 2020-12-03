@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kognise/water.css.git"
+    "url": "git+https://github.com/Robbie-Cook/bigiron.css.git"
   },
   "publishConfig": {
     "access": "public"
@@ -25,12 +25,12 @@
     "simple",
     "minimal"
   ],
-  "author": "Kognise",
+  "author": "Robbie Cook",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kognise/water.css/issues"
+    "url": "https://github.com/Robbie-Cook/bigiron.css/issues"
   },
-  "homepage": "https://github.com/kognise/water.css",
+  "homepage": "https://github.com/Robbie-Cook/bigiron.css",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",

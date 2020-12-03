@@ -26,8 +26,8 @@ const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 
 const paths = {
-  docs: { src: 'docs/**', dest: 'out/docs' },
-  styles: { src: 'src/builds/*.scss', dest: 'out', watch: ['src/**/*.css', 'src/**/*.css'] }
+  docs: { src: 'docs/**', dest: 'dist/docs' },
+  styles: { src: 'src/builds/*.scss', dest: 'dist', watch: ['src/**/*.css', 'src/**/*.css'] }
 }
 
 // https://stackoverflow.com/a/20732091
@@ -74,7 +74,7 @@ const style = () => {
       .pipe(endDiff('autoprefixer'))
 
       .pipe(sourcemaps.write('.'))
-      .pipe(flatten()) // Put files in out/*, not out/builds/*
+      .pipe(flatten()) // Put files in dist/*, not dist/builds/*
       .pipe(gulp.dest(paths.styles.dest))
 
       .pipe(filter('**/*.css')) // Remove sourcemaps from the pipeline
@@ -136,7 +136,7 @@ const browserReload = (done) => {
 }
 
 const startDevServer = () => {
-  browserSync.init({ server: { baseDir: './out/docs' } })
+  browserSync.init({ server: { baseDir: './dist/docs' } })
 
   gulp.watch(paths.styles.watch, gulp.series(style, browserReload))
   gulp.watch(paths.docs.src, gulp.series(docs, browserReload))

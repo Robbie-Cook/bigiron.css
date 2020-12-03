@@ -1,6 +1,6 @@
 'use strict'
 
-const localBase = './water.css/'
+const localBase = './bigiron.css/'
 
 const fileSizes = {
   dark: 2.57,
@@ -32,7 +32,7 @@ const updateProductHunt = (theme) => {
 const updateTheme = () => {
   const theme = themeForm.querySelector('input[name="theme"]:checked').value
 
-  const fileName = `${theme === 'auto' ? 'water' : theme}.min.css`
+  const fileName = `${theme === 'auto' ? 'bigiron' : theme}.min.css`
   const localUrl = `${localBase}${fileName}`
 
   stylesheet.href = localUrl
