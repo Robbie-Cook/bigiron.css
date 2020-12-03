@@ -26,6 +26,9 @@
     "minimal"
   ],
   "author": "Robbie Cook",
+  "release": {
+    "branches": ["main"]
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Robbie-Cook/bigiron.css/issues"
@@ -69,6 +72,7 @@
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^4.1.0",
     "puppeteer": "^3.2.0",
+    "semantic-release": "^16.0.4",
     "stylelint": "^13.5.0",
     "stylelint-config-standard": "^20.0.0"
   },
@@ -79,7 +83,5 @@
     "out/*.css",
     "LICENSE.md"
   ],
-  "dependencies": {
-    "semantic-release": "^16.0.4"
-  }
+  "dependencies": {}
 }
