@@ -20,7 +20,7 @@
   "scripts": {
     "move": "(cd .. && npm run build) && rm -rf ./src/dist && mv ../dist ./src/",
     "start": "npm run move && react-scripts start",
-    "build": "npm run move && react-scripts build",
+    "build": "react-scripts build",
     "test": "npm run move && react-scripts test",
     "eject": "react-scripts eject"
   },
