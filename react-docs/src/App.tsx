@@ -1,4 +1,5 @@
 import React from 'react';
+import "./dist/bigiron.css";
 
 function App() {
   return (

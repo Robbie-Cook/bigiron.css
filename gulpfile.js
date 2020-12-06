@@ -135,15 +135,16 @@ const browserReload = (done) => {
   return done()
 }
 
-const startDevServer = () => {
-  browserSync.init({ server: { baseDir: './dist/docs' } })
+// const startDevServer = () => {
+//   browserSync.init({ server: { baseDir: './dist/docs' } })
 
-  gulp.watch(paths.styles.watch, gulp.series(style, browserReload))
-  gulp.watch(paths.docs.src, gulp.series(docs, browserReload))
-}
+//   gulp.watch(paths.styles.watch, gulp.series(style, browserReload))
+//   gulp.watch(paths.docs.src, gulp.series(docs, browserReload))
+// }
 
 const build = gulp.parallel(style, docs)
-const watch = gulp.series(build, startDevServer)
+// const watch = gulp.series(build, startDevServer)
+const watch = build
 
 module.exports.build = build
 module.exports.watch = watch
