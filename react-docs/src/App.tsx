@@ -33,13 +33,14 @@ function App() {
       <h1>Bigiron.css</h1>
 
       <p>
-        Bigiron.css is a drop-in collection of CSS styles to make simple websites like this just a
-        little bit nicer.
-    </p>
+        Bigiron.css is a fork of <a href="https://watercss.kognise.dev/">water.css</a>, with SCSS source files, different default colors, and more Texas Red.
+      </p>
+      <p>
+      </p>
       <p>
         Now you can write your simple static site with nice semantic html, and Bigiron.css will manage
         the styling for you.
-    </p>
+      </p>
 
       <div className="row">
         <div>
