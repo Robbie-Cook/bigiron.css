@@ -48,7 +48,7 @@ function App() {
         </div>
 
 
-      </div>``
+      </div>
 
       <h2>Installation</h2>
       <div id="installation">
@@ -56,10 +56,6 @@ function App() {
           <h3 id="link-snippet-headline">
             Paste this into the <code>&lt;head&gt;</code> of your HTML:
         </h3>
-          <button type="button" id="copy-button">
-            <span id="copy-button-feedback"></span>
-          Copy to clipboard
-        </button>
         </header>
 
         <h3>Options</h3>
@@ -78,9 +74,11 @@ function App() {
         <div css={css`
           margin-bottom: 20px;
           margin-top: 20px;
-        `}>or with Webpack:</div>
+        `}>or with Webpack</div>
 
-        <CodeSnippet snippet={`import "bigiron/dist/${cssFile}" />`} />
+        <CodeSnippet snippet={`import "bigiron/dist/${cssFile}"`} />
+
+        <CodeSnippet snippet={`import "bigiron/dist/${cssFile}"`} />
 
       </div>
 
