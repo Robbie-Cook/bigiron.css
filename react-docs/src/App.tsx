@@ -18,6 +18,7 @@ export interface CodeSnippetProps {
 const CodeSnippet: React.FC<CodeSnippetProps> = (props) => {
   return <code css={css`
   user-select: all;
+  display: block;
 `}>{props.snippet}</code>
 }
 
