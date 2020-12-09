@@ -20,6 +20,11 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
+  // Make sure dependents don't require fs (css)
+  node = {
+    fs: 'empty'
+  },
+
   module: {
     noParse: /react-docs/,
     rules: [
