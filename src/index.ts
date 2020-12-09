@@ -1,7 +1,7 @@
 // @ts-ignore
 import lightVariables from './variables-light.css'
 // @ts-ignore
-import darkVariables from './variables-light.css'
+import darkVariables from './variables-dark.css'
 import css from "css";
 
 
@@ -27,11 +27,13 @@ export const darkProperties = getCssVariablesObject(darkVariables);
 export function setTheme(mode: "light" | "dark") {
 	let data = lightProperties;
   if (mode === "dark") {
-    data = darkProperties;
-  }
-
+		data = darkProperties;
+	}
+	
+	console.log(darkProperties);
+	
   const dataEntries = Object.entries(data);
   for (const [key, value] of dataEntries) {
-    document.body.style.setProperty(key, value);
+		document.body.style.setProperty(key, value);
   }
 }

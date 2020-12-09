@@ -2,6 +2,7 @@ const nodeExternals = require('webpack-node-externals')
 const path = require('path')
 
 module.exports = {
+
   entry: path.resolve(__dirname, './src/index.ts'),
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -20,11 +21,6 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
-  // Make sure dependents don't require fs (css)
-  node = {
-    fs: 'empty'
-  },
-
   module: {
     noParse: /react-docs/,
     rules: [
@@ -36,7 +32,7 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              configFile: path.resolve(__dirname, 'tsconfig.json'),
+              configFile: path.resolve(__dirname, 'tsconfig.json')
             }
           }
         ]
