@@ -21,15 +21,17 @@ module.exports = {
   },
 
   module: {
+    noParse: /react-docs/,
     rules: [
       {
         test: /(\.ts(x?))|(\.jsx?)$/,
-        exclude: [/node_modules/, /react-docs/],
+        exclude: [/node_modules/, path.resolve(__dirname, '../react-docs')],
+        include: path.resolve(__dirname, 'src/index.ts'),
         use: [
           {
             loader: 'ts-loader',
             options: {
-              configFile: path.resolve(__dirname, 'tsconfig.json')
+              configFile: path.resolve(__dirname, 'tsconfig.json'),
             }
           }
         ]
