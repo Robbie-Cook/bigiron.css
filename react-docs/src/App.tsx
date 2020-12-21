@@ -88,30 +88,30 @@ function App() {
         <h2>CSS Variables</h2>
         <p>Below is all of the CSS variables BigIron uses</p>
           <code style={{ whiteSpace: "pre" }}>
-            {escape(`
-              :root {
-                --background-body: #151414;
-                --background: #2b2b2b;
-                --background-alt: #1a242f;
-                --selection: #1c76c5;
-                --text-main: #dbdbdb;
-                --text-bright: #fff;
-                --text-muted: #a9b1ba;
-                --links: #41adff;
-                --focus: #0096bfab;
-                --border: #526980;
-                --code: #ffbe85;
-                --animation-duration: 0.1s;
-                --button-hover: #324759;
-                --scrollbar-thumb: var(--button-hover);
-                --scrollbar-thumb-hover: color-mod(var(--scrollbar-thumb) lightness(+8%));
-                --form-placeholder: #a9a9a9;
-                --form-text: #fff;
-                --variable: #d941e2;
-                --highlight: #efdb43;
-                --select-arrow: svg-load('./assets/select-arrow.svg', fill: #efefef);
-              }
-            `)}
+            {escape(
+`  :root {
+    --background-body: #151414;
+    --background: #2b2b2b;
+    --background-alt: #1a242f;
+    --selection: #1c76c5;
+    --text-main: #dbdbdb;
+    --text-bright: #fff;
+    --text-muted: #a9b1ba;
+    --links: #41adff;
+    --focus: #0096bfab;
+    --border: #526980;
+    --code: #ffbe85;
+    --animation-duration: 0.1s;
+    --button-hover: #324759;
+    --scrollbar-thumb: var(--button-hover);
+    --scrollbar-thumb-hover: color-mod(var(--scrollbar-thumb) lightness(+8%));
+    --form-placeholder: #a9a9a9;
+    --form-text: #fff;
+    --variable: #d941e2;
+    --highlight: #efdb43;
+    --select-arrow: svg-load('./assets/select-arrow.svg', fill: #efefef);
+  }
+`)}
           </code>
       </div>
 
