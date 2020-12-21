@@ -7,10 +7,12 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "@types/escape-html": "^1.0.0",
     "@types/jest": "^26.0.16",
     "@types/node": "^12.19.8",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
+    "escape-html": "^1.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -19,7 +21,7 @@
   },
   "scripts": {
     "move": "(cd .. && npm run build) && rm -rf ./src/dist && mv ../dist ./src/",
-    "start": "npm run move && react-scripts start",
+    "start": "npm run move && SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "react-scripts build",
     "test": "npm run move && react-scripts test",
     "eject": "react-scripts eject"
