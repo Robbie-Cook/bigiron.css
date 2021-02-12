@@ -80,8 +80,6 @@ function App() {
 
         <CodeSnippet snippet={`import "bigiron/dist/${cssFile}"`} />
 
-        <CodeSnippet snippet={`import "bigiron/dist/${cssFile}"`} />
-
       </div>
 
       <div>
