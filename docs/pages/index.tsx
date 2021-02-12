@@ -3,8 +3,6 @@ import { jsx, css } from "@emotion/react";
 
 import React from 'react';
 import "bigiron.css/dist/bigiron.css";
-import escape from "escape-html";
-
 
 /**
  * Interface for CodeSnippet props
@@ -86,7 +84,7 @@ function App() {
         <h2>CSS Variables</h2>
         <p>Below is all of the CSS variables BigIron uses</p>
           <code style={{ whiteSpace: "pre" }}>
-            {escape(
+            {
 `  :root {
     --background-body: #151414;
     --background: #2b2b2b;
@@ -109,7 +107,7 @@ function App() {
     --highlight: #efdb43;
     --select-arrow: svg-load('./assets/select-arrow.svg', fill: #efefef);
   }
-`)}
+`}
           </code>
       </div>
 
