@@ -30,7 +30,7 @@ function App() {
 
   return (
     <main>
-      <h1>Bigiron.css</h1>
+      <h1>🔨 Bigiron.css</h1>
 
       <p>
         Bigiron.css is a fork of <a href="https://watercss.kognise.dev/">water.css</a>, with SCSS source files, different default colors, and more Texas Red.
