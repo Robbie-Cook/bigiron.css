@@ -1,3 +1,3 @@
-cd react-docs
+cd docs
 npm i
 npm run build

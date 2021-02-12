@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "commit": "cz",
-    "build": "gulp build && webpack",
+    "build": "gulp build",
     "start": "gulp watch",
     "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
     "lint:css": "stylelint src/**/*.css docs/style.css",
@@ -45,6 +45,7 @@
     "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.3",
     "chalk": "^2.4.2",
+    "css": "^3.0.0",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.1.0",
@@ -103,7 +104,6 @@
     }
   },
   "dependencies": {
-    "commitizen": "^4.2.2",
-    "css": "^3.0.0"
+    "commitizen": "^4.2.2"
   }
 }
