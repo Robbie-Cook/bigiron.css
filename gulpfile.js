@@ -26,7 +26,6 @@ const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 
 const paths = {
-  docs: { src: 'docs/**', dest: 'dist/docs' },
   styles: { src: 'src/builds/*.scss', dest: 'dist', watch: ['src/**/*.css', 'src/**/*.css'] }
 }
 
@@ -88,45 +87,10 @@ const style = () => {
 
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(paths.styles.dest))
-      .pipe(gulp.dest(paths.docs.dest + '/bigiron.css'))
 
       .pipe(filter('**/*.css')) // Remove sourcemaps from the pipeline
       .pipe(sizereport({ gzip: true, total: false, title: 'SIZE REPORT' }))
       .pipe(browserSync.stream())
-  )
-}
-
-const docs = () => {
-  const htmlOnly = filter('**/*.html', { restore: true })
-  const jsOnly = filter('**/*.js', { restore: true })
-  const cssOnly = filter('**/*.css', { restore: true })
-
-  return (
-    gulp
-      // Exclude all HTML files but index.html
-      .src(paths.docs.src, { ignore: '**/!(index).html' })
-
-      // * Process HTML *
-      .pipe(htmlOnly)
-      .pipe(posthtml([htmlnano()]))
-      .pipe(htmlOnly.restore)
-
-      // * Process JS *
-      .pipe(jsOnly)
-      .pipe(sourcemaps.init())
-      .pipe(babel({ presets: ['@babel/preset-env'] }))
-      .pipe(terser({ toplevel: true }))
-      .pipe(sourcemaps.write('.'))
-      .pipe(jsOnly.restore)
-
-      // * Process CSS *
-      .pipe(cssOnly)
-      .pipe(sourcemaps.init())
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(sourcemaps.write('.'))
-      .pipe(cssOnly.restore)
-
-      .pipe(gulp.dest(paths.docs.dest))
   )
 }
 
@@ -142,7 +106,7 @@ const browserReload = (done) => {
 //   gulp.watch(paths.docs.src, gulp.series(docs, browserReload))
 // }
 
-const build = gulp.parallel(style, docs)
+const build = gulp.parallel(style)
 // const watch = gulp.series(build, startDevServer)
 const watch = build
 
