@@ -76,7 +76,7 @@ function App() {
           margin-top: 20px;
         `}>or with Webpack</div>
 
-        <CodeSnippet snippet={`import "bigiron/dist/${cssFile}"`} />
+        <CodeSnippet snippet={`import "bigiron.css/dist/${cssFile}"`} />
 
       </div>
 
