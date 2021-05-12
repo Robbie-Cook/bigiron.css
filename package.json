@@ -2,9 +2,10 @@
   "name": "bigiron.css",
   "version": "2.0.4",
   "description": "A drop-in collection of CSS styles to make simple websites just a little nicer",
+  "main": "dist/scripts/index.js",
   "scripts": {
     "commit": "cz",
-    "build": "gulp build",
+    "build": "gulp build && esbuild src/index.ts --bundle --outfile=dist/scripts/index.js --platform=node --target=node10.4",
     "start": "gulp watch",
     "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
     "lint:css": "stylelint src/**/*.css docs/style.css",
@@ -76,7 +77,6 @@
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^4.1.0",
     "prettier": "^2.2.1",
-    "puppeteer": "^8.0.0",
     "raw-loader": "^4.0.2",
     "semantic-release": "^16.0.4",
     "stylelint": "^13.5.0",
@@ -101,5 +101,7 @@
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "esbuild": "^0.11.20"
+  }
 }

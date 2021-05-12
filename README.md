@@ -107,3 +107,8 @@ If you are targeting browsers without support for CSS Custom Properties such as 
 ## Contributing
 
 Bigiron.css becomes better for everyone when people like you help make it better!
+
+## Publishing
+
+To publish, commit a conventional commit message with your changes,
+e.g. `fix: fixed some-ting`, and github should build your package for you.

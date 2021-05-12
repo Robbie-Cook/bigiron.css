@@ -1,7 +1,7 @@
 // @ts-ignore
-import lightVariables from './variables-light.css'
+import lightVariables from './variables-light.txt'
 // @ts-ignore
-import darkVariables from './variables-dark.css'
+import darkVariables from './variables-dark.txt'
 import css from "css";
 
 
