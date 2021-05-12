@@ -1,6 +1,6 @@
 {
   "name": "bigiron.css",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A drop-in collection of CSS styles to make simple websites just a little nicer",
   "main": "dist/scripts/index.js",
   "scripts": {
