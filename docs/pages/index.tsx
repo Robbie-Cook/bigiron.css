@@ -123,13 +123,12 @@ function App() {
         <h2>CSS Variables</h2>
         <p>Below is all of the CSS variables BigIron uses</p>
         <code style={{ whiteSpace: 'pre' }}>
-          {`  
-:root {
-  ${Object.entries(Colors).reduce((acc, curr) => {
-    acc += `--${curr[0]}: ${curr[1]};\n  `;
-    return acc;
-  }, '')}
-}`}
+          {Object.entries(Colors).reduce((acc, curr) => {
+            if (!curr[0].match(/select-arrow/g)) {
+              acc += `--${curr[0]}: ${curr[1]};\n`;
+            }
+            return acc;
+          }, '')}
         </code>
         <div
           css={css`
