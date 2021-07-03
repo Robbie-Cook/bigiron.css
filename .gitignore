@@ -89,3 +89,4 @@ typings/
 
 # Output of npm build
 out/
+dist/

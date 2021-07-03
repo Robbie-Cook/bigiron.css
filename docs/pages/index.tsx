@@ -3,7 +3,6 @@ import { jsx, css } from '@emotion/react';
 import Colors from '../colors.json';
 
 import React from 'react';
-import 'bigiron.css/dist/bigiron.css';
 import Color from '../components/Color/Color';
 
 /**
@@ -35,11 +34,13 @@ const cssFiles = {
   dark: 'dark.min.css',
 };
 
-function App() {
-  const [cssFile, setCssFile] = React.useState<typeof cssFiles.normal>(
-    cssFiles.normal
-  );
-
+function App({
+  cssState,
+  setCssState,
+}: {
+  cssState: 'normal' | 'light' | 'dark';
+  setCssState: Function;
+}) {
   return (
     <main>
       <h1>🔨 Bigiron.css</h1>
@@ -76,8 +77,8 @@ function App() {
           <input
             type="radio"
             value="auto"
-            onClick={() => setCssFile(cssFiles.normal)}
-            checked={cssFile === cssFiles.normal}
+            onClick={() => setCssState('normal')}
+            checked={cssState === 'normal'}
             name="theme"
             id="theme-auto"
           />
@@ -86,8 +87,8 @@ function App() {
           <input
             type="radio"
             value="dark"
-            onClick={() => setCssFile(cssFiles.dark)}
-            checked={cssFile === cssFiles.dark}
+            onClick={() => setCssState('dark')}
+            checked={cssState === 'dark'}
             name="theme"
             id="theme-dark"
           />
@@ -96,15 +97,15 @@ function App() {
           <input
             type="radio"
             value="light"
-            onClick={() => setCssFile(cssFiles.light)}
-            checked={cssFile === cssFiles.light}
+            onClick={() => setCssState('light')}
+            checked={cssState === 'light'}
             name="theme"
             id="theme-light"
           />
           <label htmlFor="theme-light">Light theme ☀</label>
         </form>
         <CodeSnippet
-          snippet={`<link rel="stylesheet" href="https://unpkg.com/bigiron.css@latest/dist/${cssFile}" />`}
+          snippet={`<link rel="stylesheet" href="https://unpkg.com/bigiron.css@latest/dist/${cssFiles[cssState]}" />`}
         />
 
         <div
@@ -116,20 +117,21 @@ function App() {
           or with Webpack
         </div>
 
-        <CodeSnippet snippet={`import "bigiron.css/dist/${cssFile}"`} />
+        <CodeSnippet
+          snippet={`import "bigiron.css/dist/${cssFiles[cssState]}"`}
+        />
       </div>
 
       <div>
         <h2>CSS Variables</h2>
         <p>Below is all of the CSS variables BigIron uses</p>
         <code style={{ whiteSpace: 'pre' }}>
-          {`  
-:root {
-  ${Object.entries(Colors).reduce((acc, curr) => {
-    acc += `--${curr[0]}: ${curr[1]};\n  `;
-    return acc;
-  }, '')}
-}`}
+          {Object.entries(Colors).reduce((acc, curr) => {
+            if (!curr[0].match(/select-arrow/g)) {
+              acc += `--${curr[0]}: ${curr[1]};\n`;
+            }
+            return acc;
+          }, '')}
         </code>
         <div
           css={css`
