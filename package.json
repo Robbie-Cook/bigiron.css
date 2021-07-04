@@ -2,7 +2,7 @@
   "name": "bigiron.css",
   "version": "2.0.6",
   "description": "A drop-in collection of CSS styles to make simple websites just a little nicer",
-  "main": "dist/scripts/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "cz",
     "build": "gulp build && rollup -c",
