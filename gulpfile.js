@@ -79,10 +79,10 @@ const style = () => {
       .pipe(filter('**/*.css')) // Remove sourcemaps from the pipeline
 
       // <minifying>
-      .pipe(startDiff())
-      .pipe(postcss([cssnano({ preset: ['default', { svgo: { floatPrecision: 0 } }] })]))
-      .pipe(endDiff('minification'))
-      .pipe(rename({ suffix: '.min' }))
+      // .pipe(startDiff())
+      // .pipe(postcss([cssnano({ preset: ['default', { svgo: { floatPrecision: 0 } }] })]))
+      // .pipe(endDiff('minification'))
+      // .pipe(rename({ suffix: '.min' }))
       // </minifying>
 
       .pipe(sourcemaps.write('.'))
@@ -90,13 +90,7 @@ const style = () => {
 
       .pipe(filter('**/*.css')) // Remove sourcemaps from the pipeline
       .pipe(sizereport({ gzip: true, total: false, title: 'SIZE REPORT' }))
-      .pipe(browserSync.stream())
   )
-}
-
-const browserReload = (done) => {
-  browserSync.reload()
-  return done()
 }
 
 // const startDevServer = () => {
