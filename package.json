@@ -85,6 +85,7 @@
     "postcss-inline-svg": "^5.0.0",
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
+    "rollup": "^2.52.7",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-string": "^3.0.0",
     "semantic-release": "^17.4.3",
