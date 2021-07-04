@@ -14,8 +14,6 @@ function getCssVariablesObject(str: string): Record<string, any> {
   // @ts-ignore
   const decs = postcssJs.objectify(postcss.parse(str));
 
-  console.log(decs);
-
   let obj: { [T: string]: any } = {};
   for (const dec of decs) {
     obj[dec.property] = dec.value;
