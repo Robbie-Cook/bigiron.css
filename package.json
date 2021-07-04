@@ -5,7 +5,7 @@
   "main": "dist/scripts/index.js",
   "scripts": {
     "commit": "cz",
-    "build": "gulp build && esbuild src/index.ts --bundle --outfile=dist/scripts/index.js --platform=node --target=node10.4",
+    "build": "gulp build && rollup -c",
     "start": "gulp watch",
     "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
     "lint:css": "stylelint src/**/*.css docs/style.css",
@@ -41,7 +41,10 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@changesets/cli": "^2.7.2",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@rollup/plugin-url": "^6.0.0",
     "@types/css": "0.0.31",
+    "@types/jest": "^26.0.23",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.27.3",
     "chalk": "^4.1.0",
@@ -72,20 +75,24 @@
     "gulp-terser": "^2.0.1",
     "htmlnano": "^0.2.3",
     "husky": "^6.0.0",
+    "jest": "^27.0.6",
     "node-sass": "^5.0.0",
     "pa11y": "^5.3.0",
-    "postcss": "^8.2.15",
+    "postcss": "^8.3.5",
     "postcss-color-mod-function": "^2.4.3",
     "postcss-css-variables": "^0.12.0",
     "postcss-import": "^14.0.2",
     "postcss-inline-svg": "^5.0.0",
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-string": "^3.0.0",
     "semantic-release": "^17.4.3",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^21.0.0",
+    "ts-jest": "^27.0.3",
     "ts-loader": "^8.0.11",
-    "typescript": "^4.1.2",
+    "typescript": "^4.3.5",
     "v8-compile-cache": "^2.2.0",
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
@@ -103,5 +110,8 @@
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
+  },
+  "dependencies": {
+    "postcss-js": "^3.0.3"
   }
 }

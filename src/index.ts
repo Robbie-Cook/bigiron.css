@@ -2,14 +2,20 @@
 import lightVariables from './themes/variables-light.scss';
 // @ts-ignore
 import darkVariables from './themes/variables-dark.scss';
-import css from 'css';
+import postcss from 'postcss';
+
+// @ts-ignore
+const postcssJs = require('postcss-js');
 
 /**
  * Get the CSS variables from a theme
  */
 function getCssVariablesObject(str: string): Record<string, any> {
   // @ts-ignore
-  const decs = css.parse(str)?.stylesheet?.rules[0]?.declarations;
+  const decs = postcssJs.objectify(postcss.parse(str));
+
+  console.log(decs);
+
   let obj: { [T: string]: any } = {};
   for (const dec of decs) {
     obj[dec.property] = dec.value;

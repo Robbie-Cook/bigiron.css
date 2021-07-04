@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react';
+// @ts-ignore
 import Colors from '../colors.json';
 
 import React from 'react';
@@ -142,6 +143,7 @@ function App({
           `}
         >
           {Object.entries(Colors).map(([key, color]) => (
+            // @ts-ignore
             <Color name={`var(--${key})`} color={color} />
           ))}
         </div>
