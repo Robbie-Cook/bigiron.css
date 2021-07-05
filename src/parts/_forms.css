@@ -37,8 +37,8 @@ input[type='color'] {
 
 input[type='checkbox'],
 input[type='radio'] {
-  height: 1em;
-  width: 1em;
+  height: 1rem;
+  width: 1rem;
 }
 
 input[type='radio'] {
@@ -144,6 +144,6 @@ fieldset {
 }
 
 legend {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: 600;
 }

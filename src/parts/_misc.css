@@ -78,7 +78,7 @@ details {
   align-items: flex-start;
   background-color: var(--background-alt);
   padding: 10px 10px 0;
-  margin: 1em 0;
+  margin: 1rem 0;
   border-radius: 6px;
   overflow: hidden;
 }
