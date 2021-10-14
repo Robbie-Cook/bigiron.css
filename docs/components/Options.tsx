@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const Options: React.VFC<{
-  cssState: 'normal' | 'light' | 'dark';
+  cssState: 'normal' | 'light' | 'dark' | 'variables-only';
   setCssState: Function;
 }> = (props) => {
   return (
@@ -35,6 +35,16 @@ export const Options: React.VFC<{
         id="theme-light"
       />
       <label htmlFor="theme-light">Light theme ☀</label>
+
+      <input
+        type="radio"
+        value="variables-only"
+        onClick={() => props.setCssState('variables-only')}
+        checked={props.cssState === 'variables-only'}
+        name="theme"
+        id="variables-only"
+      />
+      <label htmlFor="variables-only">Variables only 👨‍💻</label>
     </form>
   );
 };

@@ -20,21 +20,28 @@ export interface CodeSnippetProps {
  */
 const CodeSnippet: React.FC<CodeSnippetProps> = (props) => {
   return (
-    <code
+    <div
       css={css`
-        user-select: all;
-        display: block;
+        margin-bottom: 10px;
       `}
     >
-      {props.snippet}
-    </code>
+      <code
+        css={css`
+          user-select: all;
+          display: block;
+        `}
+      >
+        {props.snippet}
+      </code>
+    </div>
   );
 };
 
 const cssFiles = {
-  normal: 'bigiron.min.css',
-  light: 'light.min.css',
-  dark: 'dark.min.css',
+  normal: 'bigiron.css',
+  light: 'light.css',
+  dark: 'dark.css',
+  'variables-only': 'vars.css',
 };
 
 function App({
@@ -70,44 +77,33 @@ function App({
 
         <h2>Installation</h2>
         <div id="installation">
-          <header className="row">
-            <h3 id="link-snippet-headline">
-              Paste this into the <code>&lt;head&gt;</code> of your HTML:
-            </h3>
-          </header>
+          <header className="row"></header>
 
-          <h3>Options</h3>
+          <h3>Install</h3>
+
           <Options cssState={cssState} setCssState={setCssState} />
+          <br />
 
-          <CodeSnippet
-            snippet={`<link rel="stylesheet" href="https://unpkg.com/bigiron.css@latest/dist/${cssFiles[cssState]}" />`}
-          />
-
-          <div
-            css={css`
-              margin-bottom: 20px;
-              margin-top: 20px;
-            `}
-          >
-            or with Webpack
+          <div>
+            <CodeSnippet snippet={`npm i bigiron.css`} />
           </div>
 
           <CodeSnippet
             snippet={`import "bigiron.css/dist/${cssFiles[cssState]}"`}
           />
+
+          <h3 id="link-snippet-headline">
+            Or paste this into the <code>&lt;head&gt;</code> of your HTML:
+          </h3>
+
+          <CodeSnippet
+            snippet={`<link rel="stylesheet" href="https://unpkg.com/bigiron.css@latest/dist/${cssFiles[cssState]}" />`}
+          />
         </div>
 
         <div>
           <h2>CSS Variables</h2>
-          <p>Below is all of the CSS variables BigIron uses</p>
-          <code style={{ whiteSpace: 'pre' }}>
-            {Object.entries(Colors).reduce((acc, curr) => {
-              if (!curr[0].match(/select-arrow/g)) {
-                acc += `--${curr[0]}: ${curr[1]};\n`;
-              }
-              return acc;
-            }, '')}
-          </code>
+
           <div
             css={css`
               display: flex;
@@ -121,6 +117,16 @@ function App({
               <Color name={`var(--${key})`} color={color} />
             ))}
           </div>
+
+          <p>Below is all of the CSS variables BigIron uses</p>
+          <code style={{ whiteSpace: 'pre' }}>
+            {Object.entries(Colors).reduce((acc, curr) => {
+              if (!curr[0].match(/select-arrow/g)) {
+                acc += `--${curr[0]}: ${curr[1]};\n`;
+              }
+              return acc;
+            }, '')}
+          </code>
         </div>
 
         <h2 id="goals">Goals</h2>
