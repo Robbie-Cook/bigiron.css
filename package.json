@@ -6,15 +6,16 @@
   "sideEffects": "false",
   "scripts": {
     "commit": "cz",
-    "docs": "(cd docs && npm run update-docs && npm i && npm run dev)",
-    "update-docs": "ts-node scripts/update.ts",
+    "docs": "(cd docs && npm run update:docs && npm i && npm run dev)",
+    "update:docs": "ts-node scripts/update.ts",
     "build": "gulp build && rollup -c",
     "start": "gulp watch",
     "lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
     "lint:css": "stylelint src/**/*.css docs/style.css",
     "lint": "npm lint:js --fix && npm lint:css --fix",
     "accessibility": "npm build && node accessibility.js",
-    "validate": "npm lint:js && npm lint:css && npm accessibility"
+    "validate": "npm lint:js && npm lint:css && npm accessibility",
+    "pre-commit": "npm run update:docs"
   },
   "repository": {
     "type": "git",
