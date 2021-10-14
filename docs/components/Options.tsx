@@ -24,7 +24,7 @@ export const Options: React.VFC<{
         name="theme"
         id="theme-dark"
       />
-      <label htmlFor="theme-dark">Dark theme 🌙</label>
+      <label htmlFor="theme-dark">Dark theme 🌙 / </label>
 
       <input
         type="radio"
@@ -34,7 +34,7 @@ export const Options: React.VFC<{
         name="theme"
         id="theme-light"
       />
-      <label htmlFor="theme-light">Light theme ☀</label>
+      <label htmlFor="theme-light">Light theme ☀ / </label>
 
       <input
         type="radio"

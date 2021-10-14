@@ -12,11 +12,12 @@ const postcssJs = require('postcss-js');
  */
 function getCssVariablesObject(str: string): Record<string, any> {
   // @ts-ignore
-  const decs = postcssJs.objectify(postcss.parse(str));
+  const decs = postcssJs.objectify(postcss.parse(str))?.[':root'];
 
   let obj: { [T: string]: any } = {};
-  for (const dec of decs) {
-    obj[dec.property] = dec.value;
+  const decsEntries = Object.entries(decs);
+  for (const [key, dec] of decsEntries) {
+    obj[key] = dec;
   }
   return obj;
 }
