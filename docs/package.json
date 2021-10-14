@@ -12,7 +12,7 @@
     "@emotion/react": "^11.1.5",
     "@robbie-cook/react-components": "^6.1.15",
     "@types/css": "0.0.31",
-    "bigiron.css": "2.0.7",
+    "bigiron.css": "2.3.5",
     "css": "^3.0.0",
     "next": "10.0.6",
     "next-seo": "^4.28.1",
