@@ -117,6 +117,7 @@
     }
   },
   "dependencies": {
+    "next-seo": "^4.28.1",
     "postcss-js": "^3.0.3",
     "ts-node": "^10.3.0"
   }
