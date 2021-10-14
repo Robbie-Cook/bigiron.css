@@ -6,7 +6,7 @@
   "sideEffects": "false",
   "scripts": {
     "commit": "cz",
-    "docs": "(cd docs && npm run update:docs && npm i && npm run dev)",
+    "docs": "(npm run update:docs && cd docs && npm i && npm run dev)",
     "update:docs": "ts-node scripts/update.ts",
     "build": "gulp build && rollup -c",
     "start": "gulp watch",
