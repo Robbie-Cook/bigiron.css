@@ -355,6 +355,8 @@ function App({
 
         <footer>
           <a href="#">Back to top ⬆</a>
+          <br />
+          <br />
           <Plug />
         </footer>
       </main>
