@@ -77,7 +77,7 @@
     "gulp-sizereport": "^1.2.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^2.0.1",
-    "htmlnano": "^0.2.3",
+    "htmlnano": "^1.0.0",
     "husky": "^6.0.0",
     "jest": "^27.0.6",
     "node-sass": "^5.0.0",
