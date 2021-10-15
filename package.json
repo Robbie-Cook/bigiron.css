@@ -75,7 +75,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sizereport": "^1.2.1",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.0.1",
     "htmlnano": "^0.2.3",
     "husky": "^6.0.0",
