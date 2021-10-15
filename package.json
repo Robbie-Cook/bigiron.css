@@ -93,7 +93,7 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-string": "^3.0.0",
     "semantic-release": "^17.4.3",
-    "stylelint": "^9.3.0",
+    "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "ts-jest": "^27.0.3",
     "ts-loader": "^8.0.11",
